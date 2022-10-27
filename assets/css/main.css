@@ -15,7 +15,6 @@
   list-style: none;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
 }
 
 .header__navbar-text {
@@ -98,7 +97,7 @@
   width: 38px;
   border: none;
   outline: none;
-  border-radius: 8px;
+  border-radius: 6px;
   background-color: rgb(20, 53, 195);
 }
 
@@ -168,7 +167,7 @@
   left: 0;
   width: calc(100% + 24px);
   background-color: var(--white-color);
-  border-radius: 2px;
+  border-radius: 4px;
   box-shadow: 0 1px 5px rgb(182, 182, 182);
   display: none;
   overflow: hidden;
@@ -199,6 +198,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin: 0 8px;
+  color: rgb(157, 148, 148);
 }
 
 .header__search-history-item:hover {
@@ -211,5 +214,187 @@
   font-size: 1.4rem;
   color: var(--text-color);
   line-height: 38px;
+  display: block;
+}
+
+.header__mainNav-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 4px 0 0 0;
+  display: flex;
+}
+
+.header__mainNav-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 8px;
+  min-height: 26px;
+  position: relative;
+}
+
+/* Notification */
+.header__notify-detail {
+  display: none;
+  position: absolute;
+  width: 350px;
+  top: 75%;
+  right: 12px;
+  background-color: var(--white-color);
+  cursor: default;
+  transform-origin: calc(100% - 32px) top;
+  animation: headerNotifyGrowth ease-in 0.2s;
+  will-change: opacity, transform;
+  z-index: 1;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  box-shadow: 0 1px 5px rgb(182, 182, 182);
+}
+
+.header__notify-heading{
+  height: 40px;
+  background-color: var(--white-color);
+}
+
+.header__mainNav-item:hover .header__notify-detail{
+  display: block;
+}
+
+.header__notify-heading {
+  color: #999;
+  margin: 0 0 0 12px;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 40px;
+  user-select: none;
+  text-transform: uppercase;
+}
+
+.header__notify-list{
+  padding-left: 0;
+  list-style: none;
+}
+
+.header__notify-item{
+  display: flex;
+  padding: 8px 14px;
+}
+
+.header__notify-item:hover {
+  background-color: #fafafa;
+  cursor: pointer;
+}
+
+/* Noti-info */
+.header__notify-link{
+  display: flex;
+  width: 100%;
+  text-decoration: none;
+}
+
+.header__notify-img{
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.1)
+}
+
+.header__notify-info{
+  margin-left: 12px;
+}
+
+.header__notify-name{
+  display: block;
+  font-size: 1.4rem;
+  color: var(--text-color);
+  margin-bottom: 6px;
+  font-weight: 400;
+  line-height: 1.8rem;
+}
+
+.header__notify-description{
+  display: block;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  color: rgb(117, 111, 110);
+  margin-top: 4px;
+}
+
+
+.header__history-footer, /*History*/
+.header__notify-footer { /*Notify*/
+  display: flex;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+.header__history-footer:hover, /*History*/
+.header__notify-footer:hover { /*Notify*/
+  opacity: 0.8;
+}
+
+
+.header__history-footer-btn, /*History*/
+.header__notify-footer-btn { /*Notify*/
+  text-decoration: none;
+  color: #999;
+  width: 100%;
+  font-size: 1.4rem;
+  font-weight: 400;
+  padding: 8px 0;
+  margin: auto;
+  /* display: block; Vẫn có thể sử dụng cách này nếu ko set display: flex cho thằng cha chứa nó*/
+  text-align: center;
+}
+
+/* Cart */
+.header__cart-link{
+  text-decoration: none;
+  color: rgb(130, 134, 158);
+}
+
+.header__cart-detail{
+  display: none;
+  position: absolute;
+  width: 350px;
+  height: 300px;
+  top: 75%;
+  right: 12px;
+  background-color: var(--white-color);
+  cursor: default;
+  transform-origin: calc(100% - 32px) top;
+  animation: headerNotifyGrowth ease-in 0.2s;
+  will-change: opacity, transform;
+  z-index: 1;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  box-shadow: 0 1px 5px rgb(182, 182, 182);
+}
+
+.header__cart-detail--no-card .header__no-cart-msg,
+.header__cart-detail--no-card .header__no-cart-img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header__no-cart-msg{
+  text-align: center;
+  font-size: 1.4rem;
+  color: #999;
+  padding: 8px 0;
+  margin-top: 14px;
+}
+
+.header__no-cart-img{
+  width: 38%;
+}
+
+.header__cart-detail--no-card{
+  padding: 24px 0;
+}
+
+.header__mainNav-item:hover .header__cart-detail{
   display: block;
 }
