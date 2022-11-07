@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="stylesheet" href="./assets/css/login.css">
     
+    <script src="./assets/js/login.js"></script>
   </head>
 
   <body>
@@ -47,7 +48,7 @@
               <a href="" class="header__navbar-text">Tư vấn mua hàng: 1091091090</a>
             </li>
             <li class="header__navbar-items">
-              <i class="header__navbar-items-icon fa-solid fa-headphones""></i>
+              <i class="header__navbar-items-icon fa-solid fa-headphones"></i>
               <a href="" class="header__navbar-text">CSKH: 0916161616</a>
             </li>
             <li class="header__navbar-items">
@@ -105,9 +106,9 @@
                   <div class="header__user">
                     <i class="header__user-icon fa-regular fa-circle-user"></i>
                     <div class="header__user-sig">
-                      <span class="header__user-register">Đăng ký</span>
+                      <span class="header__user-register" onclick="opensignup()">Đăng ký</span>
                       <br>
-                      <span class="header__user-login">Đăng nhập</span>
+                      <span class="header__user-login" onclick="opensignin()">Đăng nhập</span>
                     </div>
                   </div>
                 </li>
@@ -194,7 +195,8 @@
       </header>
     </div>
     <!--Login form-->
-    <div class="modal__overlay">
+    <div class="modal">
+    <div class="modal__overlay" onclick="hideall()"></div>
       <!--Signin and Signup-->
       <div class="login__forms">
           <form action="" class="login__registre block" id="login-in">
@@ -216,7 +218,7 @@
 
               <div>
                   <span class="login__account">Don't have an Account ?</span>
-                  <span class="login__signin" id="sign-up">Sign Up</span>
+                  <span class="login__signin" id="sign-up" onclick="changetoSingup()">Sign Up</span>
               </div>
           </form>
 
@@ -229,7 +231,7 @@
               </div>
 
               <div class="login__box">
-                  <i class="fa-regular fa-envelope login-icon"></i>
+                  <i class="fa-regular fa-envelope login__icon"></i>
                   <input type="text" placeholder="Email" class="login__input">
               </div>
 
@@ -242,13 +244,13 @@
 
               <div>
                   <span class="login__account">Already have an Account ?</span>
-                  <span class="login__signup" id="sign-in">Sign In</span>
+                  <span class="login__signup" id="sign-in" onclick="changetoSingin()">Sign In</span>
               </div>
 
           </form>
       </div>
       
-  </div>
+    </div>
   </body>
 
 
