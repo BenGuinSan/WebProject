@@ -2,7 +2,7 @@
   --white-color: #fff;
   --black-color: #000;
   --text-color: #333;
-  --primary-color: rgb(238, 77, 45);
+  --primary-color:rgb(20, 53, 195);
   --border-color: #dbdbdb;
 
   --header-height: 132px;
@@ -21,6 +21,10 @@ html {
   box-sizing: border-box;
 }
 
+.hide{
+  display: none;
+}
+
 .grid {
   width: 1232px;
   max-width: 100%;
@@ -34,6 +38,8 @@ html {
 .grid__row {
   display: flex;
   flex-wrap: wrap;
+  margin-left: -8px;
+  margin-right: -8px;
 }
 
 /* Animation */
@@ -65,3 +71,59 @@ html {
     transform: scale(1);
   }
 }
+
+.btn {
+  min-width: 84px;
+  height: 34px;
+  border: none;
+  border-radius: 2px;
+  text-decoration: none;
+  font-size: 1.4rem;
+  padding: 0 12px;
+  outline: none;
+  cursor: pointer;
+  color: var(--text-color);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.6rem;
+  background-color: var(--white-color);
+  margin: 0 4px;
+}
+
+.btn.btn--normal:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.btn.btn--primary {
+  color: var(--white-color);
+  background-color: rgb(20, 53, 195);
+}
+
+/* grid 4 cột */
+.grid__col{
+  display: flex;
+  flex-direction: row;
+}
+
+.grid__col-2 {
+  /* Tạo khoảng cách mặc định giữa các col */
+  padding-left: 8px;
+  padding-right: 8px;
+  width: 16.6667%;
+}
+
+.grid__col-2-4 {
+  /* Tạo khoảng cách mặc định giữa các col */
+  padding-left: 8px;
+  padding-right: 8px;
+  width: 20%;
+}
+
+.grid__col-10 {
+  /* Tạo khoảng cách mặc định giữa các col */
+  padding-left: 8px;
+  padding-right: 8px;
+  width: 83.3334%;
+}
+
