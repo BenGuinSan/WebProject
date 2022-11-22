@@ -130,13 +130,11 @@
     outline: none;
     font-size: var(--normal-font-size);
     font-weight: 700;
-    color: var(--first-color-dark);
 }
   
 .login__input::placeholder{
     font-size: var(--normal-font-size);
     font-family: var(--body-font);
-    color: var(--first-color-light);
 }
 
 .login__forgot{
@@ -161,6 +159,8 @@
     transition: .3s;
     margin-left: 3rem;
     margin-right: 3rem;
+    width: 85%;
+    border: none;
 }
 
 a{
@@ -176,10 +176,6 @@ a{
     font-size: 15px;
 }
 
-.login__account{
-    color: var(--first-color-dark);
-}
-  
 .login__signin, .login__signup{
     color: var(--first-color);
     cursor: pointer;
